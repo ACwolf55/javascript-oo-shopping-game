@@ -38,7 +38,7 @@ Object.defineProperty(Product.prototype, 'daysToExpire', {
 
 // Add method getDetails to Product here
 Object.defineProperty(Product.prototype, 'getDetails', {
-    get: function () {
+    get: function(){
         return `Product Name: ${this.name} , Product Price: ${this.price}`
     }
 })
