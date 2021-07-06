@@ -56,6 +56,23 @@ MagicProduct.prototype = Object.create(Product.prototype)
 
 
 // Define Rating class here
+class Rating{
+    constructor(rate) {
+        this.rate = '';
+    }
+    get rating (value) {
+        if(value>1 && value <=4){
+            return 'OK'
+        }
+        else if(value>=5 && value<=7){
+            return 'GOOD'
+        }
+        else if(value > 7){
+            return 'EXCEPTIONAL'
+        }
+        else { return 'BAD'}
+    }
+}
 
 // Complete the loadProducts function
 const loadProducts = (map, prodId) => {
@@ -357,6 +374,7 @@ function init(data) {
 
 
 
+const { ok } = require("assert");
     ///////////////////////////////////////////////////////////////
     const readline = require("readline");
     require('colors');
